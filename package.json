@@ -1,0 +1,33 @@
+{
+	"name": "get-node-named-cli-args",
+	"version": "1.0.0",
+	"description": "Get the command line arguments as an object",
+	"main": "index.js",
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"test": "node test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/daytonlowell/get-node-named-cli-args.git"
+	},
+	"keywords": [
+		"node",
+		"cli",
+		"command",
+		"line",
+		"named",
+		"arguments"
+	],
+	"author": "Dayton Lowell",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/daytonlowell/get-node-named-cli-args/issues"
+	},
+	"homepage": "https://github.com/daytonlowell/get-node-named-cli-args#readme",
+	"devDependencies": {
+		"uvu": "^0.5.1"
+	}
+}
