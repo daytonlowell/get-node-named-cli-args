@@ -14,7 +14,7 @@ test('booleans are parsed correctly', () => {
 	assert.equal(getNamedArgs([ '', '', 'hi=true', 'bye=false' ]), { hi: true, bye: false })
 })
 
-test('booleans are parsed correctly', () => {
+test('JSON is parsed correctly', () => {
 	assert.equal(getNamedArgs([ '', '', 'hi={ "hello": true }' ]), { hi: { hello: true } })
 })
 
