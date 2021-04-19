@@ -1,24 +1,18 @@
 module.exports = (args = process.argv) => {
-	const parsedArgs = args.slice(2).map(arg => {
-		let key, val
-		const splitPosition = arg.indexOf('=')
+	return Object.fromEntries(args.slice(2).map(arg => {
+		let key = arg
+		let val = void 0
+		const pos = arg.indexOf('=')
 
-		if (splitPosition > -1) {
-			key = arg.substring(0, splitPosition)
-			val = arg.substring(splitPosition + 1)
-		} else {
-			key = arg
-			val = void 0
+		if (pos > -1) {
+			key = arg.substring(0, pos)
+			val = arg.substring(pos + 1)
 		}
 
 		try {
 			val = JSON.parse(val)
-		} catch (err) {
-			//
-		}
+		} catch (e) { /**/ }
 
 		return [ key, val ]
-	})
-
-	return Object.fromEntries(parsedArgs)
+	}))
 }
