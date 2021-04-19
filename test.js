@@ -22,8 +22,12 @@ test('no args', () => {
 	assert.equal(getNamedArgs([]), {})
 })
 
-test('only first equal matter for split', () => {
-	assert.equal(getNamedArgs([ '', '', 'foo=2+2=1']), { foo: '2+2=1' })
+test('everything after the first equal is the val', () => {
+	assert.equal(getNamedArgs([ '', '', 'foo=2+2=1' ]), { foo: '2+2=1' })
+})
+
+test('no val args are given an undefined val', () => {
+	assert.equal(getNamedArgs([ '', '', 'foo' ]), { foo: undefined })
 })
 
 test.run()
