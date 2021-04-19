@@ -22,4 +22,8 @@ test('no args', () => {
 	assert.equal(getNamedArgs([]), {})
 })
 
+test('only first equal matter for split', () => {
+	assert.equal(getNamedArgs([ '', '', 'foo=2+2=1']), { foo: '2+2=1' })
+})
+
 test.run()
