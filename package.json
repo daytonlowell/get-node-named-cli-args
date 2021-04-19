@@ -1,6 +1,6 @@
 {
 	"name": "get-node-named-cli-args",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Get the command line arguments as an object",
 	"main": "index.js",
 	"engines": {
