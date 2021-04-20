@@ -19,4 +19,4 @@ const getNamedArgs = require('get-node-named-cli-args')
 const myArgs = getNamedArgs()// { foo: true, bar: 123, baz: 'cool' }
 ```
 
-> If you need more advanced features check out [mri by @lukeed](https://github.com/lukeed/mri)
+> If you need more advanced features, check out [mri by @lukeed](https://github.com/lukeed/mri)
